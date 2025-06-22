@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Puzzle Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>N-Puzzle Solver</h1>
+        
+        <div class="controls">
+            <div class="size-control">
+                <label>Kích thước:</label>
+                <select id="puzzleSize">
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                </select>
+            </div>
+            <button id="generateBtn">Tạo Puzzle Mới</button>
+            <button id="solveBtn">Giải Puzzle</button>
+        </div>
+
+        <div class="puzzle-container">
+            <div id="puzzleBoard" class="puzzle-board"></div>
+        </div>
+
+        <div class="solution-controls">
+            <button id="prevBtn" disabled>Bước Trước</button>
+            <button id="nextBtn" disabled>Bước Tiếp</button>
+            <button id="autoPlayBtn" disabled>Tự Động</button>
+            <span id="stepCounter">Bước: 0/0</span>
+        </div>
+
+        <div class="stats-container">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Số bước thực hiện:</span>
+                    <span id="stepsCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Độ phức tạp không gian:</span>
+                    <span id="spaceComplexity">0</span> nút
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Độ phức tạp thời gian:</span>
+                    <span id="timeComplexity">0</span> nút
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Thời gian giải quyết:</span>
+                    <span id="solveTime">0</span>ms
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
